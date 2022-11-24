@@ -13,13 +13,13 @@ const Search = () => {
     setMessage("");
     setDogoBreed("");
 
-    fetch(`https://dog.ceo/api/breed/${dogo}/images`)
+    fetch(`https://dog.ceo/api/breed/${dogo.toLowerCase()}/images`)
       .then((response) => response.json())
       .then((data) => {
-        setDogoName(dogo);
-        setDogo(dogo);
+        setDogoName(dogo.toLowerCase());
+        setDogo(dogo.toLowerCase());
 
-        return fetch(`https://dog.ceo/api/breed/${dogo}/list`);
+        return fetch(`https://dog.ceo/api/breed/${dogo.toLowerCase()}/list`);
       })
       .then((response) => response.json())
       .then((data) => {
@@ -34,13 +34,15 @@ const Search = () => {
   function captureSubDogo(dogo, subDogo) {
     setMessage("");
     setDogoBreed("");
-    fetch(`https://dog.ceo/api/breed/${dogo}/${subDogo}/images`)
+    fetch(
+      `https://dog.ceo/api/breed/${dogo.toLowerCase()}/${subDogo.toLowerCase()}/images`
+    )
       .then((response) => response.json())
       .then((data) => {
-        setDogoName(dogo);
-        setDogo(dogo);
+        setDogoName(dogo.toLowerCase());
+        setDogo(dogo.toLowerCase());
 
-        return fetch(`https://dog.ceo/api/breed/${dogo}/list`);
+        return fetch(`https://dog.ceo/api/breed/${dogo.toLowerCase()}/list`);
       })
       .then((response) => response.json())
       .then((data) => {
