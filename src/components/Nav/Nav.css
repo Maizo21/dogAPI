@@ -1,0 +1,11 @@
+.navbar {
+  background-color: #0b223a;
+}
+
+.navbar .nav-link {
+  color: #fff;
+}
+
+.navbar .navbar-toggler {
+  border: none;
+}

@@ -1,8 +1,15 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen } from "@testing-library/react";
+import App from "./App";
+import Main from "./components/Main/Main";
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+beforeEach(() => render(<Main></Main>));
+
+describe("Componente Main", () => {
+  it("Debe mostrar el titulo", () => {
+    expect(screen.queryByText(/Dog CEO/i)).toBeInTheDocument();
+  });
+
+  it("Debe mostrar la descripción", () => {
+    expect(screen.queryByText(/mejor amigo/i)).toBeInTheDocument();
+  });
 });

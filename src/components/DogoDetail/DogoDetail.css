@@ -1,0 +1,40 @@
+.details-container {
+  height: 80vh;
+}
+
+.details-container .card-element {
+  width: 60%;
+}
+
+.details-container div a .back {
+  width: 15px;
+  filter: invert(1);
+}
+
+.details-container div .card-img-top {
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+}
+
+@media only screen and (min-width: 800px) {
+  .details-container {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .details-container div .card-img-top {
+    max-height: none;
+    height: auto;
+  }
+
+  .cards-container {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .cards-container .card-body {
+    width: 100%;
+  }
+}
