@@ -32,9 +32,9 @@ const Nav = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" aria-current="page" href="#">
+              <Link className="nav-link" to={`/`}>
                 Inicio
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
